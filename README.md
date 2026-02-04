@@ -1,3 +1,3 @@
 #Project1LRJO
 Laura Romero
-https://github.com/bsu-cs222s1-spring26-smalviya/Project1LRJO/blob/main/README.md
+https://docs.google.com/document/d/1tXIMZHC72vSQIogcn0oza8003PBXtuyaoe4hqIgVbEI/edit?tab=t.0#heading=h.wvqzbrtgh3lz
