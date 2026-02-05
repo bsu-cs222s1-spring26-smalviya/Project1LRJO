@@ -1,0 +1,83 @@
+{
+  "continue": {
+    "rvcontinue": "20260115092335|1333040060",
+    "continue": "||"
+  },
+  "query": {
+    "redirects": [
+      {
+        "from": "Zappa",
+        "to": "Frank Zappa"
+      }
+    ],
+    "pages": {
+      "10672": {
+        "pageid": 10672,
+        "ns": 0,
+        "title": "Frank Zappa",
+        "revisions": [
+          {
+            "user": "TheCharlevoix",
+            "timestamp": "2026-01-30T23:10:39Z"
+          },
+          {
+            "user": "TheCharlevoix",
+            "timestamp": "2026-01-30T23:10:06Z"
+          },
+          {
+            "user": "InternetArchiveBot",
+            "timestamp": "2026-01-30T06:42:30Z"
+          },
+          {
+            "user": "Tbf62",
+            "timestamp": "2026-01-27T19:43:08Z"
+          },
+          {
+            "user": "Tbf62",
+            "timestamp": "2026-01-27T19:42:04Z"
+          },
+          {
+            "user": "Tbf62",
+            "timestamp": "2026-01-27T19:41:06Z"
+          },
+          {
+            "user": "Tbf62",
+            "timestamp": "2026-01-27T19:40:26Z"
+          },
+          {
+            "user": "Marcocapelle",
+            "timestamp": "2026-01-24T20:51:00Z"
+          },
+          {
+            "user": "Aradicus77",
+            "timestamp": "2026-01-22T15:07:15Z"
+          },
+          {
+            "user": "Jared Avery",
+            "timestamp": "2026-01-19T23:50:08Z"
+          },
+          {
+            "user": "Jared Avery",
+            "timestamp": "2026-01-19T23:47:25Z"
+          },
+          {
+            "user": "Issac I Navarro",
+            "timestamp": "2026-01-17T23:58:46Z"
+          },
+          {
+            "user": "Zackmann08",
+            "timestamp": "2026-01-17T21:17:59Z"
+          },
+          {
+            "user": "Cc21646",
+            "timestamp": "2026-01-17T19:55:09Z"
+          },
+          {
+            "user": "AverageChapstick",
+            "timestamp": "2026-01-15T20:09:14Z"
+          }
+        ]
+      }
+    }
+  }
+}
