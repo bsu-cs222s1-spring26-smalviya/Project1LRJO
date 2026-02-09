@@ -10,11 +10,11 @@ public class Revision {
         this.timestamp = timestamp;
     }
 
-    private String getUser() {
+    public String getUser() {
         return user;
     }
 
-    private String getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 }
