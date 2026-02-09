@@ -9,7 +9,7 @@ public class WikipediaRevisionTest {
 
     @Test
     public void testWikiParse() {
-        WikipediaRevisionTest  parser = new WikipediaRevisionTestParse();
+        WikipediaRevisionReader  parser = new WikipediaRevisionReader();
         InputStream testDataStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("wikiresource.json");
         List<Revision> revisions;
         revisions = parser.testWikiParse(testDataStream);
