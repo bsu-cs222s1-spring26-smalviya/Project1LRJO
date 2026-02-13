@@ -14,7 +14,7 @@ public class WikipediaRevisionTest {
         List<Revision> revisions;
         revisions = parser.testWikiParse(testDataStream);
         Assertions.assertNotNull(revisions);
-        Assertions.assertEquals("TheCharlevoix", revisions.get(0).user);
+        Assertions.assertEquals("TheCharlevoix", revisions.get(0).getUser());
         Assertions.assertEquals(15, revisions.size());
     }
 
