@@ -1,26 +1,19 @@
 package edu.bsu.cs;
 
 import java.io.InputStream;
+import java.util.List;
 
 public class App {
     static void main(String[] args) {
         InputChecker checker = new InputChecker();
         WikipediaRevisionReader revisionReader = new WikipediaRevisionReader();
-        RevisionParser revisionParser = new RevisionParser();
         RevisionFormatter Formatter = new RevisionFormatter();
 
         try {
-            String articleTitle = checker.validateAndGetArticleTitle(args);
+            String articleTitle = checker.validateAndRetrieveArticleTitle(args);
             InputStream jsonStream = revisionReader.fetchRevisions(articleTitle);
-            revisionParser.Parseresult result = revisionParser.parse(jsonStream);
-
-            if (result.wasRedirected()) {
-                System.out.println("Redirected to " + result.getRedirectedTitle());
-            }
-
-            List<Revision> revisions = result.getRevisions();
+            List<Revision> revisions = revisionReader.testWikiParse(jsonStream);
             int lineNumber = 1;
-
             for (Revision revision : revisions) {
                 System.out.println(formatter.format(lineNumber, revision));
                 lineNumber++;
