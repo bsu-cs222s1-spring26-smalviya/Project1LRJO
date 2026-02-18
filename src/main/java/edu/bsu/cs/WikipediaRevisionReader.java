@@ -21,7 +21,7 @@ public class WikipediaRevisionReader {
                     JsonPath.read(jsonString, "$.query.pages.*.revisions[*]");
             for (Map<String, Object> revMap : revisionMaps) {
                 String user = (String) revMap.get("user");
-                String timestamp = (String);
+                String timestamp = (String)( "%d  %s  %s n");
 
 
             }
