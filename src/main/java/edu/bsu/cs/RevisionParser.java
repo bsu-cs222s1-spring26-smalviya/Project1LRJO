@@ -1,6 +1,6 @@
 package edu.bsu.cs;
 
-import com.jayway.jsonpath.Jsonpath;
+import com.jayway.jsonpath.JsonPath;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
