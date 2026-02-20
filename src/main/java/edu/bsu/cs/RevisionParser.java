@@ -13,7 +13,7 @@ public class RevisionParser {
     public List<Revision> parse(InputStream jsonStream) {
         List<Revision> revisions = new ArrayList<>();
 
-        List<Map<String, String>> revisionData = JsonPath.read(JsonStream, "$.query.pages.*.revisions[*]");
+        List<Map<String, String>> revisionData = JsonPath(JsonStream, "$.query.pages.*.revisions[*]");
 
         for (Map<String, String> entry : revisionData) {
             String user = entry.get("user");
@@ -22,5 +22,8 @@ public class RevisionParser {
             revisions.add(new Revision(timestamp, user));
         }
         return revisions;
+    }
+
+    private List<Map<String, String>> JsonPath(Object jsonStream, String s) {
     }
 }

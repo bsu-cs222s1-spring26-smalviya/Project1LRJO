@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class WikipediaRevisionReader {
 
 
+    private String redirectedTarget;
+
     public List<Revision> testWikiParse(InputStream inputStream) {
         Scanner scanner = new Scanner(inputStream).useDelimiter("\\A");
         String jsonString = scanner.hasNext() ? scanner.next() : "";
@@ -31,5 +33,21 @@ public class WikipediaRevisionReader {
 
         return revisions;
 
+    }
+
+    public InputStream fetchRevisions(String articleTitle) {
+        return null;
+    }
+
+    public boolean wasRedirected() {
+        return false;
+    }
+
+    public void setRedirectedTarget(String redirectedTarget) {
+        this.redirectedTarget = redirectedTarget;
+    }
+
+    public String getRedirectedTarget() {
+        return redirectedTarget;
     }
 }
