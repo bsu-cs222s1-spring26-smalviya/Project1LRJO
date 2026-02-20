@@ -10,6 +10,7 @@ public class WikipediaRevisionReader {
 
 
     private String redirectedTarget;
+    private Map<String, Object>[] revisionMaps;
 
     public List<Revision> testWikiParse(InputStream inputStream) {
         Scanner scanner = new Scanner(inputStream).useDelimiter("\\A");
