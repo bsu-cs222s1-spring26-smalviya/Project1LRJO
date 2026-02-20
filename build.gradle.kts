@@ -1,9 +1,7 @@
-import org.gradle.internal.declarativedsl.parsing.main
-import sun.jvmstat.monitor.MonitoredVmUtil.mainClass
 
 plugins {
-    id("java")
-    id("application")
+    java
+    application
     id("org.openjfx.javafxplugin") version "0.0.13"
 }
 
@@ -24,10 +22,9 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
-javafx {
+javafx
     version= "21"
-    modules("javafx.controls", "javafx.fxml")
-}
-application {
+    modules("javafx.controls")
+   application {
     mainClass.set("edu.bsu.cs.GUI")
 }
