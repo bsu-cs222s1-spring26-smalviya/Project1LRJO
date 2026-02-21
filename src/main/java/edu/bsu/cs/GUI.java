@@ -1,16 +1,14 @@
 package edu.bsu.cs;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.w3c.dom.Text;
-
-import java.awt.*;
-import java.awt.Insets;
 import java.util.List;
 
-public class GUI  extends Main {
+public class GUI  extends Application  {
 
     private TextField articleInput;
     private TextArea resultsArea;
@@ -28,46 +26,46 @@ public class GUI  extends Main {
         Label inputLabel = new Label("Enter Wikipedia Article Name:");
         articleInput = new TextField();
 
-        searchButton = new Button(("Revision Search");
+        searchButton = new Button("Revision Search");
         searchButton.setOnAction(e -> handleSearch());
 
         resultsArea = new TextArea();
-        resultsArea.setEdible(false);
+        resultsArea.setEditable(false);
         resultsArea.setPrefRowCount(15) ;
 
-
-        Vbox root = new Vbox(10);
-        root.setPadding(new java.awt.Insets((15)));
+        VBox root = new VBox(10);
+        root.setPadding(new Insets(10,10,10,10));
         root.getChildren().addAll(
                 titleLabel,
                 inputLabel,
                 articleInput,
                 searchButton,
-                new Label( "Results Found:")
+                new Label( "Results Found:"),
                 resultsArea
                 );
         Scene scene = new Scene(root, 600, 500);
-        primaryStage.setScence(scene);
+        primaryStage.setScene(scene);
         primaryStage.setTitle("Wikipedia Revision");
         primaryStage.show();
 
-        private void searchingHandle () {
-            String articleTitle = articleInput.getText().trim();
-            if articleTitle.isEmpty()) {
-            showError("Please enter article title.");
-            return;
-            }
-        }
 
+        }
+        private void handleSearch() {
+        String articleTitle = articleInput.getText().trim();
+
+            if (articleTitle.isEmpty()) {
+                showError("Please enter article title.");
+                return;
+            }
         searchButton.setDisable(true);
         resultsArea.setText("Searching...");
 
         try {
             WikipediaRevisionReader  reader = new WikipediaRevisionReader();
-            java.io.InputStream stream = reader.fetcgRevisions(articleTitle);
-            List<Revision> revisions = reader.testWikiParse(stream);
+           List<Revision> revisions = reader.fetchRevisions(articleTitle);
 
-            StringBuilder output = new StringBuilder();
+           StringBuilder output = new StringBuilder();
+
             int lineNumber = 1;
             for (Revision revision : revisions) {
                 output.append(String.format("%d %s %s%n",
@@ -83,14 +81,13 @@ public class GUI  extends Main {
             searchButton.setDisable(false);
         }
 
-
     }
 
     private void showError(String message) {
-        Alert alert = new Alert(Alert.Alert.Type.ERROR);
+        Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
         alert.setHeaderText(null);
-        alert.setContextText(message);
+        alert.setContentText(message);
         alert.showAndWait();
     }
 }
