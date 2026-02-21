@@ -13,4 +13,8 @@ public class InputChecker {
         }
         return articleTitle;
     }
+
+    public boolean isValid(String[] args) {
+        return false;
+    }
 }

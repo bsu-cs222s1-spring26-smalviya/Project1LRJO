@@ -24,4 +24,8 @@ public class RevisionFormatter {
      }
      return builder.toString();
     }
+
+    public boolean format(int i, Revision revision) {
+        return false;
+    }
 }
